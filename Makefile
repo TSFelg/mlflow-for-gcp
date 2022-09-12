@@ -1,7 +1,7 @@
 IMAGE_NAME=mlflow-gcp
 VERSION=0.20
 build:
-	docker build -t "${IMAGE_NAME}" .
+	docker build -t "${IMAGE_NAME}" --platform linux/amd64 .
 
 docker-auth:
 	gcloud auth configure-docker
